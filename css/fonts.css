@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Mak';
+    src: url('../fonts/Mak-Light.woff2') format('woff2'),
+        url('../fonts/Mak-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+

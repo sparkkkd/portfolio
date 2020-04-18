@@ -1,0 +1,30 @@
+.preloader
+  z-index: 999
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100vw
+  height: 100vh
+  background-color: #000000
+  transform: translateY(0)
+  transform-origin: bottom
+
+.loader
+  width: 100px
+  height: 100px
+  border: 2px solid $white
+  border-bottom-color: $grey
+  border-radius: 50%
+  box-shadow: 0 0 80px rgba($white, 0.3)
+  animation: loader-spin 1s infinite
+
+.preloader_done
+  transform: translateY(-100%)
+  transition: all .5s ease-in
+
+@keyframes loader-spin
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)
