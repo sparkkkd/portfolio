@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #ffffff;
+  overflow: hidden;
 }
 
 a {
@@ -12,6 +13,105 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+/** ----------------------------------- Global cursor ----------------------------------- **/
+html {
+  cursor: none;
+}
+
+html:hover #cursor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#cursor {
+  z-index: 999;
+  width: 0;
+  height: 0;
+  position: fixed;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+}
+
+#cursor:before {
+  content: '';
+  display: block;
+  border-radius: 100%;
+  position: absolute;
+  border: 1px solid #ffffff;
+  height: 20px;
+  width: 20px;
+  -webkit-animation: pulse 3s infinite;
+          animation: pulse 3s infinite;
+}
+
+#cursor:after {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border: 0;
+  background: #ffffff;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/** ----------------------------------- Menu cursor ----------------------------------- **/
+.menu-cursor {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  mix-blend-mode: difference;
+}
+
+.menu-cursor_active {
+  width: 200px;
+  height: 200px;
 }
 
 .preloader {
@@ -176,8 +276,8 @@ a:hover {
   background-color: #fff;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   z-index: -1;
@@ -251,6 +351,11 @@ a:hover {
   padding: 30px;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+.menu__button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .menu__button:hover .menu__button__element::after {

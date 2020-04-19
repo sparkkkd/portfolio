@@ -1,0 +1,61 @@
+/** ----------------------------------- Global cursor ----------------------------------- **/
+html
+  cursor: none
+
+html:hover #cursor
+  display: flex
+
+#cursor
+  z-index: 999
+  width: 0
+  height: 0
+  position: fixed
+  display: none
+  align-items: center
+  justify-content: center
+  pointer-events: none
+
+#cursor:before
+  content: ''
+  display: block
+  border-radius: 100%
+  position: absolute
+  border: 1px solid $white
+  height: 20px
+  width: 20px
+  animation: pulse 3s infinite
+
+#cursor:after
+  position: absolute
+  height: 5px
+  width: 5px
+  border: 0
+  background: $white
+
+
+@keyframes pulse
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.2)
+  100%
+    transform: scale(1)
+
+/** ----------------------------------- Menu cursor ----------------------------------- **/
+.menu-cursor
+  z-index: 999
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 0px
+  height: 0px
+  transform: translate(-50%, -50%)
+  background: #ffffff
+  border-radius: 50%
+  pointer-events: none
+  transition: all .1s
+  mix-blend-mode: difference
+
+.menu-cursor_active
+  width: 200px
+  height: 200px
