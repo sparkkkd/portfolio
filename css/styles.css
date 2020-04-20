@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #ffffff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -13,6 +13,27 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+/** ----------------------------------- Custom scrollbar ----------------------------------- **/
+.test {
+  width: 100vw;
+  height: 100vh;
+  background-color: #333333;
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #000000;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
 }
 
 /** ----------------------------------- Global cursor ----------------------------------- **/
@@ -182,7 +203,7 @@ html:hover #cursor {
   height: 100vh;
   background-color: #000000;
   z-index: 888;
-  right: -100%;
+  right: -110%;
   -webkit-transition: all .5s;
   transition: all .5s;
   -webkit-transition-timing-function: ease-in-out;
@@ -339,7 +360,7 @@ html:hover #cursor {
   transition: all .3s;
 }
 
-/** button **/
+/** menu button **/
 .menu__button {
   z-index: 900;
   cursor: pointer;
