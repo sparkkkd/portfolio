@@ -16,12 +16,6 @@ a:hover {
 }
 
 /** ----------------------------------- Custom scrollbar ----------------------------------- **/
-.test {
-  width: 100vw;
-  height: 100vh;
-  background-color: #333333;
-}
-
 body::-webkit-scrollbar {
   background-color: transparent;
   width: 5px;
@@ -36,11 +30,17 @@ body::-webkit-scrollbar-thumb {
   background-color: #ffffff;
 }
 
-/** ----------------------------------- Global cursor ----------------------------------- **/
-html {
-  cursor: none;
+/** Global settings **/
+.section-title {
+  color: #ffffff;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 120px;
+  padding-left: 120px;
 }
 
+/** ----------------------------------- Global cursor ----------------------------------- **/
 html:hover #cursor {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,6 +60,8 @@ html:hover #cursor {
       -ms-flex-pack: center;
           justify-content: center;
   pointer-events: none;
+  -webkit-transition: all .1s;
+  transition: all .1s;
 }
 
 #cursor:before {
@@ -133,6 +135,24 @@ html:hover #cursor {
 .menu-cursor_active {
   width: 200px;
   height: 200px;
+}
+
+@media (max-width: 1025px) {
+  #cursor {
+    display: none;
+  }
+  #cursor::before {
+    display: none;
+  }
+  #cursor::after {
+    display: none;
+  }
+  .menu-cursor {
+    display: none;
+  }
+  .menu-cursor_active {
+    display: none;
+  }
 }
 
 .preloader {
@@ -800,6 +820,133 @@ html:hover #cursor {
     margin-right: 0px;
     margin-bottom: 20px;
     padding: 11px 0px 8px 0px;
+  }
+}
+
+/** ----------------------------------- About section ----------------------------------- **/
+.about {
+  max-width: 100vw;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #0f0f0f;
+  overflow-x: hidden;
+}
+
+.title__box {
+  z-index: 99;
+  width: 100%;
+  height: 244px;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/** About info **/
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+.info__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.info__text:nth-child(2) {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
+}
+
+.info__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 4px 5px 4px 25px;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 48px;
+  letter-spacing: 20px;
+  line-height: 100%;
+}
+
+.info__subtitle {
+  font-size: 24px;
+  line-height: 158%;
+  white-space: nowrap;
+}
+
+/** ----------------------------------- About media ----------------------------------- **/
+@media (max-width: 321px) {
+  .title__box {
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  .about__title {
+    font-size: 24px;
+    letter-spacing: 40px;
+    padding-left: 40px;
+  }
+  .about__info {
+    margin-bottom: 50px;
+  }
+  .info__text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__text:nth-child(2) {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__title {
+    font-size: 24px;
+  }
+  .info__subtitle {
+    font-size: 15px;
+  }
+  .info__img {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

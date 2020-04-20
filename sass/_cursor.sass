@@ -1,6 +1,6 @@
 /** ----------------------------------- Global cursor ----------------------------------- **/
 html
-  cursor: none
+ 
 
 html:hover #cursor
   display: flex
@@ -14,6 +14,7 @@ html:hover #cursor
   align-items: center
   justify-content: center
   pointer-events: none
+  transition: all .1s
 
 #cursor:before
   content: ''
@@ -59,3 +60,16 @@ html:hover #cursor
 .menu-cursor_active
   width: 200px
   height: 200px
+
+@media ( max-width: 1025px )
+  #cursor
+    display: none
+    &::before
+      display: none
+    &::after
+      display: none
+
+  .menu-cursor
+    display: none
+  .menu-cursor_active
+    display: none
