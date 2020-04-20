@@ -15,6 +15,10 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
 /** ----------------------------------- Custom scrollbar ----------------------------------- **/
 body::-webkit-scrollbar {
   background-color: transparent;
@@ -910,14 +914,187 @@ html:hover #cursor {
 .info__subtitle {
   font-size: 24px;
   line-height: 158%;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 /** ----------------------------------- About media ----------------------------------- **/
+@media (max-width: 1024px) {
+  .title__box {
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  .about__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__title {
+    font-size: 54px;
+    letter-spacing: 40px;
+    padding-left: 40px;
+  }
+  .about__info {
+    margin-bottom: 50px;
+  }
+  .info__text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__text:nth-child(2) {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__title {
+    font-size: 44px;
+  }
+  .info__subtitle {
+    font-size: 36px;
+    line-height: 200%;
+  }
+  .info__img {
+    display: none;
+  }
+}
+
+@media (max-width: 769px) {
+  .title__box {
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  .about__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__title {
+    font-size: 44px;
+    letter-spacing: 40px;
+    padding-left: 40px;
+  }
+  .about__info {
+    margin-bottom: 50px;
+  }
+  .info__text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__text:nth-child(2) {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__title {
+    font-size: 34px;
+  }
+  .info__subtitle {
+    font-size: 26px;
+    line-height: 200%;
+  }
+  .info__img {
+    display: none;
+  }
+}
+
+@media (max-width: 415px) {
+  .title__box {
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  .about__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__title {
+    font-size: 34px;
+    letter-spacing: 40px;
+    padding-left: 40px;
+  }
+  .about__info {
+    margin-bottom: 50px;
+  }
+  .info__text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__text:nth-child(2) {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__title {
+    font-size: 24px;
+  }
+  .info__subtitle {
+    font-size: 16px;
+    line-height: 200%;
+  }
+  .info__img {
+    display: none;
+  }
+}
+
+@media (max-width: 376px) {
+  .title__box {
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  .about__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__title {
+    font-size: 34px;
+    letter-spacing: 40px;
+    padding-left: 40px;
+  }
+  .about__info {
+    margin-bottom: 50px;
+  }
+  .info__text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__text:nth-child(2) {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__title {
+    font-size: 24px;
+  }
+  .info__subtitle {
+    font-size: 16px;
+    line-height: 200%;
+  }
+  .info__img {
+    display: none;
+  }
+}
+
 @media (max-width: 321px) {
   .title__box {
     height: 150px;
     margin-bottom: 50px;
+  }
+  .about__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .about__title {
     font-size: 24px;
@@ -943,7 +1120,8 @@ html:hover #cursor {
     font-size: 24px;
   }
   .info__subtitle {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 200%;
   }
   .info__img {
     display: none;
