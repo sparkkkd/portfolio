@@ -15,10 +15,6 @@ a:hover {
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-}
-
 /** ----------------------------------- Custom scrollbar ----------------------------------- **/
 body::-webkit-scrollbar {
   background-color: transparent;
@@ -929,7 +925,7 @@ html:hover #cursor {
             align-items: center;
   }
   .about__title {
-    font-size: 54px;
+    font-size: 44px;
     letter-spacing: 40px;
     padding-left: 40px;
   }
