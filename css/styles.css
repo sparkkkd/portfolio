@@ -31,6 +31,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 /** Global settings **/
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #0f0f0f;
+  overflow-x: hidden;
+}
+
 .section-title {
   color: #ffffff;
   font-size: 55px;
@@ -1122,5 +1131,59 @@ html:hover #cursor {
   .info__img {
     display: none;
   }
+}
+
+.skills__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skill__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skill__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 170px;
+}
+
+.skill__name {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
