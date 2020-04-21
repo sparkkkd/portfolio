@@ -46,7 +46,8 @@ $(document).ready(function(){
   $('.works__slider').slick({
     appendArrows: $('.slider__arrows'),
     prevArrow: '<button class="prev-arrow"></button>',
-    nextArrow: '<button class="next-arrow"></button>'
+    nextArrow: '<button class="next-arrow"></button>',
+    cssEase: 'cubic-bezier(.75,.02,.48,.99)'
   });
 });
 

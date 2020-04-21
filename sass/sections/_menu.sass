@@ -5,13 +5,13 @@
   background-color: #000000
   z-index: 888
   right: -110%
-  transition: all .5s 
+  transition: all 1s cubic-bezier(.65,0,.62,.98)
   transition-timing-function: ease-in-out
   
 
 .menu_active
   right: 0
-  transition: all .5s 
+  transition: all 1s cubic-bezier(0,.52,.7,1)
   .item__box
     opacity: 1
     transform: translateY(0px)
@@ -82,7 +82,7 @@
   margin-top: 30px
   opacity: 0
   transform: translateY(40px)
-  transition: all .2s linear
+  transition: all .3s 
   &:first-child
     margin-top: 0px 
 
@@ -91,7 +91,6 @@
   text-transform: uppercase
   font-size: 72px
   &:hover
-    text-shadow: 0 0 50px red
     transform: scale(1.2)
     transition: all .3s
 
