@@ -39,5 +39,17 @@ $(document).ready(function () {
   $(document).mousemove(function(e){
     $('.menu-cursor').css({left:e.pageX, top:e.pageY});
   });
+ 
+/** ----------------------------------- Slick slider ----------------------------------- **/
+
+$(document).ready(function(){
+  $('.works__slider').slick({
+    appendArrows: $('.slider__arrows'),
+    prevArrow: '<button class="prev-arrow"></button>',
+    nextArrow: '<button class="next-arrow"></button>'
+  });
+});
+
+
 
 });
