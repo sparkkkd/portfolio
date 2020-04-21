@@ -13,7 +13,7 @@ $(document).ready(function () {
 
   $('a.item__box').click(function() {
     $('html, body').animate({
-      scrollTop: $($(this).attr('href')).offset().top + "px"
+      scrollTop: $($(this).attr('href')).offset().top + 60 + "px"
     }, {
       duration: 1000,
       easing: "swing"
