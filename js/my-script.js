@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+/* ----------------------------------------------- wow ----------------------------------------------- */
+  new WOW().init();
+
 /** ----------------------------------- Menu ----------------------------------- **/
 
   $('.menu__button').click(function (e) { 
@@ -8,6 +11,19 @@ $(document).ready(function () {
     $('.menu').toggleClass('menu_active');
     $('.menu-cursor').toggleClass('menu-cursor_active');
   });
+
+/* ----------------------------------------------- Summary ----------------------------------------------- */
+
+$('.summary__button').click(function (e) { 
+  e.preventDefault();
+  $('.summary').toggleClass('summary_active');
+});
+
+$('.summary__close').click(function (e) { 
+  e.preventDefault();
+  $('.summary').toggleClass('summary_active');  
+});
+
 
 /** ----------------------------------- Smooth Scroll ----------------------------------- **/
 
