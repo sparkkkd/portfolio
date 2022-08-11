@@ -1,0 +1,72 @@
+.intro
+  padding-top: 40px
+
+.intro__wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.intro__title
+  margin-bottom: 30px
+
+.intro__img
+  position: relative
+  margin-bottom: 40px
+
+.moon-vector
+  width: 1340px
+  height: 100%
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  z-index: -1
+
+.vector
+  margin-bottom: 30px
+  &:last-child
+    margin-bottom: 0px
+
+/* ************** Adaptive ************** */
+@media screen and ( max-width: 1600px) 
+  .moon-vector
+     width: 1110px
+
+@media screen and ( max-width: 1300px) 
+  .intro__img
+    width: 400px
+
+  .moon-vector
+     width: 900px
+
+  .vector
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0px
+
+@media screen and ( max-width: 1000px) 
+  .moon-vector
+     width: 700px
+
+@media screen and ( max-width: 800px) 
+  .moon-vector
+     width: 600px
+
+@media screen and ( max-width: 600px) 
+  .intro__img
+    width: 250px
+
+  .vector
+    margin-bottom: 0px
+
+  .moon-vector
+     width: 450px
+
+@media screen and ( max-width: 450px) 
+  .moon-vector
+     width: 100vw

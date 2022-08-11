@@ -1,0 +1,57 @@
+.contacts
+  padding-bottom: 30px
+
+.contacts__wrapper
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.contacts__box
+  margin-bottom: 30px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  
+.contacts__text
+  margin-bottom: 10px
+  font-size: 24px
+  letter-spacing: 7px
+  
+.contact__link
+  margin-bottom: 10px
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 24px
+  letter-spacing: 4px
+  transition: transform .3s
+  img
+    margin: 0 5px
+    width: 30px
+  &:last-child
+    margin-bottom: 0ex
+  &:hover
+    transform: translateX(30px)
+
+/* ************** Adaptive ************** */
+@media screen and ( max-width: 1300px )
+  .contacts__text
+    font-size: 20px
+    letter-spacing: 4px
+  
+  .contact__link
+    font-size: 20px
+    letter-spacing: 4px
+
+
+@media screen and ( max-width: 450px )
+  .contacts__text
+    font-size: 16px
+    letter-spacing: 2px
+  
+  .contact__link
+    font-size: 16px
+    letter-spacing: 2px

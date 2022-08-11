@@ -1,0 +1,101 @@
+.header
+  padding: 30px 30px 0px 30px
+
+.header__wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.header__img
+  animation: moon-anim 4s cubic-bezier(.29,.46,.63,.89) infinite
+
+.header__img--reverse
+  animation: moon-anim--reverse 4s cubic-bezier(.29,.46,.63,.89) infinite
+
+.nav
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.nav__top
+  transform-origin: center
+  transition: transform .3s cubic-bezier(.29,.46,.63,.89)
+  &:hover
+    transform: rotateY(180deg)
+
+.nav__bottom
+  margin-top: 30px
+  display: flex
+  justify-content: center
+  align-items: center
+
+.nav__item
+  margin-right: 20px
+  font-size: 24px
+  transition: transform .3s cubic-bezier(.29,.46,.63,.89)
+  &:last-child
+    margin-right: 0
+  &:hover
+    transform: translateY(10px)
+
+.burger
+  display: none
+  width: 50px
+  height: 30px
+  justify-content: space-between
+  align-items: center
+  flex-direction: column
+  span
+    display: block
+    width: 100%
+    height: 2px
+    background-color: #fff
+
+
+/* ************** Moons animation ************** */
+@keyframes moon-anim 
+  0%
+    transform: rotateZ(0deg) rotateX(0deg) 
+  50%
+    transform: rotateZ(10deg) rotateX(20deg)
+  100%
+    transform: rotateZ(0deg) rotateX(0deg)
+
+@keyframes moon-anim--reverse
+  0%
+    transform: rotateZ(10deg) rotateX(20deg) rotateY(180deg)
+  50%
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(180deg)
+  100%
+    transform: rotateZ(10deg) rotateX(20deg) rotateY(180deg)
+
+/* ************************ Adaptive ************************ */
+@media screen and ( max-width: 800px )
+  .header
+    padding-top: 10px
+
+  .nav__top
+    display: none
+  
+  .nav__bottom
+    margin-top: 0px
+
+  .header__img
+    width: 30px
+    img
+      width: 100%
+
+@media screen and ( max-width: 600px )
+  .header__img
+    width: 40px
+
+  .header__img--reverse
+    display: none
+
+  .burger
+    display: flex
+
+  .nav
+    display: none
+

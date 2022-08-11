@@ -1,0 +1,77 @@
+.works__wrapper
+  position: relative
+  padding: 0px 30px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.work__card
+  width: 300px
+  transition: transform .3s
+  a
+    img
+      border-radius: 15px
+  &:hover
+    transform: scale(0.9) translateY(-30px)
+
+.works__slider 
+  display: none
+  width: 100% !important
+
+.swiper-wrapper
+  display: flex !important
+  justify-content: space-between !important
+  align-items: center !important
+
+.slider-button
+  display: none
+
+/* ************** Adaptive ************** */
+@media screen and (max-width: 1300px)
+  .work__card
+    width: 200px
+
+@media screen and (max-width: 800px)
+  .work__card
+    width: 150px
+
+@media screen and (max-width: 600px)
+  .works__wrapper
+    padding: 0
+
+  .work__card--desktop
+    display: none
+
+  .works__slider 
+    display: flex
+
+  .swiper__slide
+    display: flex
+    justify-self: auto
+    align-items: center
+
+  .work__card
+    margin: 0 auto
+
+  .slider-button
+    display: block
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 2
+
+  .swiper-button-prev
+    left: 0
+
+  .swiper-button-next
+    right: 0
+
+  .work__vector
+    display: none
+
+@media screen and (max-width: 380px)
+  .work__card
+    width: 100px
+    a
+      img
+        border-radius: 10px
