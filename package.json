@@ -31,7 +31,11 @@
 		"xml-loader": "^1.2.1"
 	},
 	"dependencies": {
+		"aos": "^2.3.4",
+		"gsap": "^3.10.4",
+		"locomotive-scroll": "^4.1.4",
 		"normalize.css": "^8.0.1",
-		"swiper": "^8.3.2"
+		"swiper": "^8.3.2",
+		"underscore": "^1.13.4"
 	}
 }

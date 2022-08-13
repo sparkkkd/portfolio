@@ -3,6 +3,7 @@ body
   background: url(../img/bg.jpg) center center no-repeat
   background-size: cover
   font-family: 'rajdhani'
+  // overflow: hidden
 
 h1,h2,h3,h4,h5,h6
   padding: 0
@@ -33,13 +34,14 @@ img
   text-transform: uppercase
   text-shadow: 0px 0px 11px rgba(255, 255, 255, 0.2)
 
-/* ************** Lines ************** */
+/* ************** Lines ************** */  
 .left-line
   position: absolute
   left: 0px
   width: 2px
   height: 100%
   background-color: rgba(255, 255, 255, .2)
+  z-index: 5
 
 .right-line
   position: absolute
@@ -47,7 +49,11 @@ img
   width: 2px
   height: 100%
   background-color: rgba(255, 255, 255, .2)
+  z-index: 5
 
+.scroll-href
+  cursor: pointer
+  
 /* ************** Divider ************** */
 .section-divider
   padding: 30px 0px
